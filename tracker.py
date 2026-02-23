@@ -8,10 +8,10 @@ import json
 # 1. PAGE CONFIG
 st.set_page_config(page_title="Campus Rath | Suryansh", layout="wide")
 
-# 2. FILE PATHS
-video_path = r"C:\Users\aisee\Videos\campusrathvideo.mp4"
-img_path = r"C:\Users\aisee\OneDrive\Desktop\CampusSync\campussync\ev_icon.png.png"
-geojson_path = r"C:\Users\aisee\OneDrive\Desktop\CampusSync\campussync\campus_data.geojson" 
+# 2. FILE PATHS (CLOUD READY)
+video_path = "campusrathvideo.mp4"
+img_path = "ev_icon.png.png"
+geojson_path = "campus_data.geojson"
 
 def get_base64(path):
     if os.path.exists(path):
@@ -222,4 +222,5 @@ st.sidebar.markdown(f"**Engineers:** Suryansh, Shashank & Vineet")
 st.sidebar.markdown("**Project:** Campus Rath")
 st.sidebar.progress(85, text="Battery: 85%")
 if st.sidebar.button("Simulate Auto Movement"):
+
     st.sidebar.warning("Initializing Pathing Algorithm...")
